@@ -4,15 +4,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../source/led_blinky.c \
+../source/led_matrix_driver.c \
 ../source/semihost_hardfault.c 
 
 OBJS += \
-./source/led_blinky.o \
+./source/led_matrix_driver.o \
 ./source/semihost_hardfault.o 
 
 C_DEPS += \
-./source/led_blinky.d \
+./source/led_matrix_driver.d \
 ./source/semihost_hardfault.d 
 
 

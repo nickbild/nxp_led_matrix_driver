@@ -32,25 +32,25 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: evkmimxrt1010_iled_blinky_led_matrix_driver.axf
+all: evkmimxrt1010_led_matrix_driver.axf
 
 # Tool invocations
-evkmimxrt1010_iled_blinky_led_matrix_driver.axf: $(OBJS) $(USER_OBJS)
+evkmimxrt1010_led_matrix_driver.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MCU Linker'
-	arm-none-eabi-gcc -nostdlib -Xlinker -Map="evkmimxrt1010_iled_blinky_led_matrix_driver.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T evkmimxrt1010_iled_blinky_led_matrix_driver_Debug.ld -o "evkmimxrt1010_iled_blinky_led_matrix_driver.axf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -nostdlib -Xlinker -Map="evkmimxrt1010_led_matrix_driver.map" -Xlinker --gc-sections -Xlinker -print-memory-usage -Xlinker --sort-section=alignment -Xlinker --cref -mcpu=cortex-m7 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -T "evkmimxrt1010_led_matrix_driver_Debug.ld" -o "evkmimxrt1010_led_matrix_driver.axf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) evkmimxrt1010_iled_blinky_led_matrix_driver.axf
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) evkmimxrt1010_led_matrix_driver.axf
 	-@echo ' '
 
 post-build:
 	-@echo 'Performing post-build steps'
-	-arm-none-eabi-size "evkmimxrt1010_iled_blinky_led_matrix_driver.axf"; # arm-none-eabi-objcopy -v -O binary "evkmimxrt1010_iled_blinky_led_matrix_driver.axf" "evkmimxrt1010_iled_blinky_led_matrix_driver.bin" ; # checksum -p MIMXRT1011xxxxx -d "evkmimxrt1010_iled_blinky_led_matrix_driver.bin";
+	-arm-none-eabi-size "evkmimxrt1010_led_matrix_driver.axf"; # arm-none-eabi-objcopy -v -O binary "evkmimxrt1010_led_matrix_driver.axf" "evkmimxrt1010_led_matrix_driver.bin" ; # checksum -p MIMXRT1011xxxxx -d "evkmimxrt1010_led_matrix_driver.bin";
 	-@echo ' '
 
 .PHONY: all clean dependents post-build

@@ -1,31 +1,31 @@
 /*
- * Copyright 2019 NXP
- * All rights reserved.
+ * Nick Bild
+ * NXP MIMXRT1010-EVK LED Matrix Driver
+ * https://github.com/nickbild/nxp_led_matrix_driver
  *
- * SPDX-License-Identifier: BSD-3-Clause
+ * Project initialized with NXP's "led_blinky" demo app code.
  */
 
 #include "board.h"
-
 #include "pin_mux.h"
 #include "clock_config.h"
+
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
-#define EXAMPLE_LED_GPIO BOARD_USER_LED_GPIO
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D1_GPIO_PIN			// J56, 14
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D2_GPIO_PIN			// J56, 16
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D3_GPIO_PIN			// J57, 10
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D4_GPIO_PIN			// J57, 8
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D5_GPIO_PIN			// J57, 6
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D6_GPIO_PIN			// J57, 12
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D7_GPIO_PIN			// J26, 2
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D9_GPIO_PIN			// J26, 4
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D10_GPIO_PIN			// J26, 6
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_D14_GPIO_PIN			// J26, 8
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_2_GPIO_PIN			// J57, 20
-//#define EXAMPLE_LED_GPIO_PIN BOARD_USER_9_GPIO_PIN			// J56, 2
-#define EXAMPLE_LED_GPIO_PIN BOARD_USER_10_GPIO_PIN				// J56, 4
+#define pinR1 BOARD_USER_AD1_GPIO_PIN			// J56, 14
+#define pinG1 BOARD_USER_AD2_GPIO_PIN			// J56, 16
+#define pinB1 BOARD_USER_AD3_GPIO_PIN			// J57, 10
+#define pinR2 BOARD_USER_AD4_GPIO_PIN			// J57, 8
+#define pinG2 BOARD_USER_AD5_GPIO_PIN			// J57, 6
+#define pinB2 BOARD_USER_AD6_GPIO_PIN			// J57, 12
+#define pinOE BOARD_USER_AD7_GPIO_PIN			// J26, 2
+#define latch BOARD_USER_AD9_GPIO_PIN			// J26, 4
+#define pinClk BOARD_USER_AD10_GPIO_PIN			// J26, 6
+#define selectA BOARD_USER_AD14_GPIO_PIN		// J26, 8
+#define selectB BOARD_USER_2_GPIO_PIN			// J57, 20
+#define selectC BOARD_USER_9_GPIO_PIN			// J56, 2
+#define selectD BOARD_USER_10_GPIO_PIN			// J56, 4
 
 /*******************************************************************************
  * Prototypes
@@ -62,7 +62,6 @@ void SysTick_DelayTicks(uint32_t n)
  */
 int main(void)
 {
-    /* Board pin init */
     BOARD_InitPins();
     BOARD_BootClockRUN();
     BOARD_InitDebugConsole();
@@ -75,19 +74,23 @@ int main(void)
         }
     }
 
+    /* Main program loop */
     while (1)
     {
         /* Delay 1000 ms */
         SysTick_DelayTicks(100U);
+
         if (g_pinSet)
         {
-            GPIO_PinWrite(EXAMPLE_LED_GPIO, EXAMPLE_LED_GPIO_PIN, 0U);
+            GPIO_PinWrite(BOARD_USER_GPIO, pinG1, 0U);
             g_pinSet = false;
         }
         else
         {
-            GPIO_PinWrite(EXAMPLE_LED_GPIO, EXAMPLE_LED_GPIO_PIN, 1U);
+            GPIO_PinWrite(BOARD_USER_GPIO, pinG1, 1U);
             g_pinSet = true;
         }
+
     }
+
 }

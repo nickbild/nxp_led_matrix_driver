@@ -6,7 +6,7 @@
  * Generated linker script file for MIMXRT1011xxxxx
  * Created from linkscript.ldt by FMCreateLinkLibraries
  * Using Freemarker v2.3.23
- * MCUXpresso IDE v11.0.1 [Build 2563] [2019-09-01] on Dec 15, 2019 1:41:48 PM
+ * MCUXpresso IDE v11.0.1 [Build 2563] [2019-09-01] on Dec 15, 2019 3:58:19 PM
  */
 
 INCLUDE "evkmimxrt1010_iled_blinky_led_matrix_driver_Debug_library.ld"

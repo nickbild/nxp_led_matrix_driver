@@ -364,56 +364,56 @@ Discarded input sections
  .data          0x0000000000000000        0x0 ./startup/startup_mimxrt1011.o
  .bss           0x0000000000000000        0x0 ./startup/startup_mimxrt1011.o
  .debug_macro   0x0000000000000000      0xad2 ./startup/startup_mimxrt1011.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .group         0x0000000000000000        0xc ./source/led_blinky.o
- .text          0x0000000000000000        0x0 ./source/led_blinky.o
- .data          0x0000000000000000        0x0 ./source/led_blinky.o
- .bss           0x0000000000000000        0x0 ./source/led_blinky.o
- .debug_macro   0x0000000000000000      0xad2 ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x10 ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x1c ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x22 ./source/led_blinky.o
- .debug_macro   0x0000000000000000      0x12e ./source/led_blinky.o
- .debug_macro   0x0000000000000000      0x5b3 ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x22 ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x10 ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x4d ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x1c ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x22 ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0xd8 ./source/led_blinky.o
- .debug_macro   0x0000000000000000     0x1305 ./source/led_blinky.o
- .debug_macro   0x0000000000000000      0x11f ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x20 ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x1c ./source/led_blinky.o
- .debug_macro   0x0000000000000000    0x194f4 ./source/led_blinky.o
- .debug_macro   0x0000000000000000      0x54e ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0xd7 ./source/led_blinky.o
- .debug_macro   0x0000000000000000      0x193 ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0xca ./source/led_blinky.o
- .debug_macro   0x0000000000000000       0x10 ./source/led_blinky.o
- .debug_macro   0x0000000000000000      0x192 ./source/led_blinky.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .group         0x0000000000000000        0xc ./source/led_matrix_driver.o
+ .text          0x0000000000000000        0x0 ./source/led_matrix_driver.o
+ .data          0x0000000000000000        0x0 ./source/led_matrix_driver.o
+ .bss           0x0000000000000000        0x0 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000      0xad2 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x10 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x1c ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x22 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000      0x12e ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000      0x5b3 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x22 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x10 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x4d ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x1c ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x22 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0xd8 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000     0x1305 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000      0x11f ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x20 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x1c ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000    0x194f4 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000      0x54e ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0xd7 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000      0x193 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0xca ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000       0x10 ./source/led_matrix_driver.o
+ .debug_macro   0x0000000000000000      0x195 ./source/led_matrix_driver.o
  .group         0x0000000000000000        0xc ./source/semihost_hardfault.o
  .text          0x0000000000000000        0x0 ./source/semihost_hardfault.o
  .data          0x0000000000000000        0x0 ./source/semihost_hardfault.o
@@ -1073,7 +1073,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x32 ./board/board.o
  .debug_macro   0x0000000000000000       0x2e ./board/board.o
  .debug_macro   0x0000000000000000       0x10 ./board/board.o
- .debug_macro   0x0000000000000000      0x192 ./board/board.o
+ .debug_macro   0x0000000000000000      0x195 ./board/board.o
  .group         0x0000000000000000        0xc ./board/clock_config.o
  .group         0x0000000000000000        0xc ./board/clock_config.o
  .group         0x0000000000000000        0xc ./board/clock_config.o
@@ -1350,7 +1350,7 @@ LOAD ./utilities/fsl_assert.o
 LOAD ./utilities/fsl_debug_console.o
 LOAD ./utilities/fsl_str.o
 LOAD ./startup/startup_mimxrt1011.o
-LOAD ./source/led_blinky.o
+LOAD ./source/led_matrix_driver.o
 LOAD ./source/semihost_hardfault.o
 LOAD ./drivers/fsl_clock.o
 LOAD ./drivers/fsl_common.o
@@ -1548,16 +1548,16 @@ END GROUP
                 0x0000000060002258      0x104 ./utilities/fsl_debug_console.o
                 0x0000000060002258                DbgConsole_Init
  .text.__NVIC_SetPriority
-                0x000000006000235c       0x54 ./source/led_blinky.o
+                0x000000006000235c       0x54 ./source/led_matrix_driver.o
  .text.SysTick_Config
-                0x00000000600023b0       0x44 ./source/led_blinky.o
+                0x00000000600023b0       0x44 ./source/led_matrix_driver.o
  .text.SysTick_Handler
-                0x00000000600023f4       0x24 ./source/led_blinky.o
+                0x00000000600023f4       0x24 ./source/led_matrix_driver.o
                 0x00000000600023f4                SysTick_Handler
  .text.SysTick_DelayTicks
-                0x0000000060002418       0x28 ./source/led_blinky.o
+                0x0000000060002418       0x28 ./source/led_matrix_driver.o
                 0x0000000060002418                SysTick_DelayTicks
- .text.main     0x0000000060002440       0x70 ./source/led_blinky.o
+ .text.main     0x0000000060002440       0x70 ./source/led_matrix_driver.o
                 0x0000000060002440                main
  .text.CLOCK_GetOscFreq
                 0x00000000600024b0       0x30 ./drivers/fsl_clock.o
@@ -2212,7 +2212,7 @@ END GROUP
                 0x0000000020000020        0x4 ./utilities/fsl_debug_console.o
                 0x0000000020000020                g_serialHandle
  .bss.g_systickCounter
-                0x0000000020000024        0x4 ./source/led_blinky.o
+                0x0000000020000024        0x4 ./source/led_matrix_driver.o
                 0x0000000020000024                g_systickCounter
  .bss.g_xtalFreq
                 0x0000000020000028        0x4 ./drivers/fsl_clock.o
@@ -2233,7 +2233,7 @@ END GROUP
                 0x0000000020000100                __heaps
  .bss.errno     0x0000000020000104        0x4 /Applications/MCUXpressoIDE_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.macosx_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_c.a(errno.o)
                 0x0000000020000104                errno
- .bss.g_pinSet  0x0000000020000108        0x1 ./source/led_blinky.o
+ .bss.g_pinSet  0x0000000020000108        0x1 ./source/led_matrix_driver.o
                 0x0000000020000108                g_pinSet
  *(SORT_BY_ALIGNMENT(COMMON))
                 0x000000002000010c                . = ALIGN (0x4)
@@ -2300,7 +2300,7 @@ OUTPUT(evkmimxrt1010_iled_blinky_led_matrix_driver.axf elf32-littlearm)
  .debug_info    0x00000000000007e2      0x5cb ./xip/fsl_flexspi_nor_boot.o
  .debug_info    0x0000000000000dad      0xa20 ./utilities/fsl_debug_console.o
  .debug_info    0x00000000000017cd      0x81b ./startup/startup_mimxrt1011.o
- .debug_info    0x0000000000001fe8      0xdba ./source/led_blinky.o
+ .debug_info    0x0000000000001fe8      0xdba ./source/led_matrix_driver.o
  .debug_info    0x0000000000002da2       0x3c ./source/semihost_hardfault.o
  .debug_info    0x0000000000002dde     0x1a9f ./drivers/fsl_clock.o
  .debug_info    0x000000000000487d      0xb4e ./drivers/fsl_gpio.o
@@ -2318,7 +2318,7 @@ OUTPUT(evkmimxrt1010_iled_blinky_led_matrix_driver.axf elf32-littlearm)
  .debug_abbrev  0x000000000000014c      0x13f ./xip/fsl_flexspi_nor_boot.o
  .debug_abbrev  0x000000000000028b      0x20b ./utilities/fsl_debug_console.o
  .debug_abbrev  0x0000000000000496      0x147 ./startup/startup_mimxrt1011.o
- .debug_abbrev  0x00000000000005dd      0x204 ./source/led_blinky.o
+ .debug_abbrev  0x00000000000005dd      0x204 ./source/led_matrix_driver.o
  .debug_abbrev  0x00000000000007e1       0x31 ./source/semihost_hardfault.o
  .debug_abbrev  0x0000000000000812      0x378 ./drivers/fsl_clock.o
  .debug_abbrev  0x0000000000000b8a      0x255 ./drivers/fsl_gpio.o
@@ -2341,7 +2341,7 @@ OUTPUT(evkmimxrt1010_iled_blinky_led_matrix_driver.axf elf32-littlearm)
  .debug_aranges
                 0x00000000000000b0      0x2e0 ./startup/startup_mimxrt1011.o
  .debug_aranges
-                0x0000000000000390       0x40 ./source/led_blinky.o
+                0x0000000000000390       0x40 ./source/led_matrix_driver.o
  .debug_aranges
                 0x00000000000003d0       0x20 ./source/semihost_hardfault.o
  .debug_aranges
@@ -2365,7 +2365,7 @@ OUTPUT(evkmimxrt1010_iled_blinky_led_matrix_driver.axf elf32-littlearm)
  .debug_aranges
                 0x00000000000008b0       0x48 ./board/pin_mux.o
 
-.debug_macro    0x0000000000000000    0x1e426
+.debug_macro    0x0000000000000000    0x1e471
  .debug_macro   0x0000000000000000      0x118 ./xip/evkmimxrt1010_flexspi_nor_config.o
  .debug_macro   0x0000000000000118      0xad2 ./xip/evkmimxrt1010_flexspi_nor_config.o
  .debug_macro   0x0000000000000bea       0x10 ./xip/evkmimxrt1010_flexspi_nor_config.o
@@ -2391,84 +2391,84 @@ OUTPUT(evkmimxrt1010_iled_blinky_led_matrix_driver.axf elf32-littlearm)
  .debug_macro   0x000000000001c758      0x13f ./xip/fsl_flexspi_nor_boot.o
  .debug_macro   0x000000000001c897       0xca ./xip/fsl_flexspi_nor_boot.o
  .debug_macro   0x000000000001c961       0x10 ./xip/fsl_flexspi_nor_boot.o
- .debug_macro   0x000000000001c971      0x192 ./xip/fsl_flexspi_nor_boot.o
- .debug_macro   0x000000000001cb03       0x7c ./xip/fsl_flexspi_nor_boot.o
- .debug_macro   0x000000000001cb7f      0x17b ./utilities/fsl_debug_console.o
- .debug_macro   0x000000000001ccfa       0x16 ./utilities/fsl_debug_console.o
- .debug_macro   0x000000000001cd10       0x10 ./utilities/fsl_debug_console.o
- .debug_macro   0x000000000001cd20       0x28 ./utilities/fsl_debug_console.o
- .debug_macro   0x000000000001cd48       0x56 ./utilities/fsl_debug_console.o
- .debug_macro   0x000000000001cd9e       0x34 ./utilities/fsl_debug_console.o
- .debug_macro   0x000000000001cdd2       0x29 ./startup/startup_mimxrt1011.o
- .debug_macro   0x000000000001cdfb      0x13d ./source/led_blinky.o
- .debug_macro   0x000000000001cf38      0x106 ./source/led_blinky.o
- .debug_macro   0x000000000001d03e       0x11 ./source/semihost_hardfault.o
- .debug_macro   0x000000000001d04f      0x103 ./drivers/fsl_clock.o
- .debug_macro   0x000000000001d152      0x113 ./drivers/fsl_gpio.o
- .debug_macro   0x000000000001d265      0x113 ./drivers/fsl_lpuart.o
- .debug_macro   0x000000000001d378       0xa7 ./device/system_MIMXRT1011.o
- .debug_macro   0x000000000001d41f      0x10f ./component/uart/lpuart_adapter.o
- .debug_macro   0x000000000001d52e       0x10 ./component/uart/lpuart_adapter.o
- .debug_macro   0x000000000001d53e       0x22 ./component/uart/lpuart_adapter.o
- .debug_macro   0x000000000001d560      0x136 ./component/serial_manager/serial_manager.o
- .debug_macro   0x000000000001d696      0x127 ./component/serial_manager/serial_port_uart.o
- .debug_macro   0x000000000001d7bd       0x22 ./component/serial_manager/serial_port_uart.o
- .debug_macro   0x000000000001d7df      0x14d ./board/board.o
- .debug_macro   0x000000000001d92c       0xd0 ./board/board.o
- .debug_macro   0x000000000001d9fc      0x7fd ./board/board.o
- .debug_macro   0x000000000001e1f9      0x115 ./board/clock_config.o
- .debug_macro   0x000000000001e30e      0x118 ./board/pin_mux.o
+ .debug_macro   0x000000000001c971      0x195 ./xip/fsl_flexspi_nor_boot.o
+ .debug_macro   0x000000000001cb06       0x7c ./xip/fsl_flexspi_nor_boot.o
+ .debug_macro   0x000000000001cb82      0x17b ./utilities/fsl_debug_console.o
+ .debug_macro   0x000000000001ccfd       0x16 ./utilities/fsl_debug_console.o
+ .debug_macro   0x000000000001cd13       0x10 ./utilities/fsl_debug_console.o
+ .debug_macro   0x000000000001cd23       0x28 ./utilities/fsl_debug_console.o
+ .debug_macro   0x000000000001cd4b       0x56 ./utilities/fsl_debug_console.o
+ .debug_macro   0x000000000001cda1       0x34 ./utilities/fsl_debug_console.o
+ .debug_macro   0x000000000001cdd5       0x29 ./startup/startup_mimxrt1011.o
+ .debug_macro   0x000000000001cdfe      0x185 ./source/led_matrix_driver.o
+ .debug_macro   0x000000000001cf83      0x106 ./source/led_matrix_driver.o
+ .debug_macro   0x000000000001d089       0x11 ./source/semihost_hardfault.o
+ .debug_macro   0x000000000001d09a      0x103 ./drivers/fsl_clock.o
+ .debug_macro   0x000000000001d19d      0x113 ./drivers/fsl_gpio.o
+ .debug_macro   0x000000000001d2b0      0x113 ./drivers/fsl_lpuart.o
+ .debug_macro   0x000000000001d3c3       0xa7 ./device/system_MIMXRT1011.o
+ .debug_macro   0x000000000001d46a      0x10f ./component/uart/lpuart_adapter.o
+ .debug_macro   0x000000000001d579       0x10 ./component/uart/lpuart_adapter.o
+ .debug_macro   0x000000000001d589       0x22 ./component/uart/lpuart_adapter.o
+ .debug_macro   0x000000000001d5ab      0x136 ./component/serial_manager/serial_manager.o
+ .debug_macro   0x000000000001d6e1      0x127 ./component/serial_manager/serial_port_uart.o
+ .debug_macro   0x000000000001d808       0x22 ./component/serial_manager/serial_port_uart.o
+ .debug_macro   0x000000000001d82a      0x14d ./board/board.o
+ .debug_macro   0x000000000001d977       0xd0 ./board/board.o
+ .debug_macro   0x000000000001da47      0x7fd ./board/board.o
+ .debug_macro   0x000000000001e244      0x115 ./board/clock_config.o
+ .debug_macro   0x000000000001e359      0x118 ./board/pin_mux.o
 
-.debug_line     0x0000000000000000     0x5c5e
+.debug_line     0x0000000000000000     0x5c68
  .debug_line    0x0000000000000000      0x2cb ./xip/evkmimxrt1010_flexspi_nor_config.o
  .debug_line    0x00000000000002cb      0x2e7 ./xip/fsl_flexspi_nor_boot.o
  .debug_line    0x00000000000005b2      0x656 ./utilities/fsl_debug_console.o
  .debug_line    0x0000000000000c08      0x87d ./startup/startup_mimxrt1011.o
- .debug_line    0x0000000000001485      0x3d0 ./source/led_blinky.o
- .debug_line    0x0000000000001855       0x5a ./source/semihost_hardfault.o
- .debug_line    0x00000000000018af      0xaf2 ./drivers/fsl_clock.o
- .debug_line    0x00000000000023a1      0x482 ./drivers/fsl_gpio.o
- .debug_line    0x0000000000002823     0x10bd ./drivers/fsl_lpuart.o
- .debug_line    0x00000000000038e0      0x470 ./device/system_MIMXRT1011.o
- .debug_line    0x0000000000003d50      0x406 ./component/uart/lpuart_adapter.o
- .debug_line    0x0000000000004156      0x67b ./component/serial_manager/serial_manager.o
- .debug_line    0x00000000000047d1      0x413 ./component/serial_manager/serial_port_uart.o
- .debug_line    0x0000000000004be4      0x693 ./board/board.o
- .debug_line    0x0000000000005277      0x5b3 ./board/clock_config.o
- .debug_line    0x000000000000582a      0x434 ./board/pin_mux.o
+ .debug_line    0x0000000000001485      0x3da ./source/led_matrix_driver.o
+ .debug_line    0x000000000000185f       0x5a ./source/semihost_hardfault.o
+ .debug_line    0x00000000000018b9      0xaf2 ./drivers/fsl_clock.o
+ .debug_line    0x00000000000023ab      0x482 ./drivers/fsl_gpio.o
+ .debug_line    0x000000000000282d     0x10bd ./drivers/fsl_lpuart.o
+ .debug_line    0x00000000000038ea      0x470 ./device/system_MIMXRT1011.o
+ .debug_line    0x0000000000003d5a      0x406 ./component/uart/lpuart_adapter.o
+ .debug_line    0x0000000000004160      0x67b ./component/serial_manager/serial_manager.o
+ .debug_line    0x00000000000047db      0x413 ./component/serial_manager/serial_port_uart.o
+ .debug_line    0x0000000000004bee      0x693 ./board/board.o
+ .debug_line    0x0000000000005281      0x5b3 ./board/clock_config.o
+ .debug_line    0x0000000000005834      0x434 ./board/pin_mux.o
 
-.debug_str      0x0000000000000000    0xf0c66
+.debug_str      0x0000000000000000    0xf0ddb
  .debug_str     0x0000000000000000    0xe4dcd ./xip/evkmimxrt1010_flexspi_nor_config.o
                                       0xe4e64 (size before relaxing)
- .debug_str     0x00000000000e4dcd     0x154e ./xip/fsl_flexspi_nor_boot.o
-                                      0xe56cc (size before relaxing)
- .debug_str     0x00000000000e631b      0xd79 ./utilities/fsl_debug_console.o
+ .debug_str     0x00000000000e4dcd     0x1554 ./xip/fsl_flexspi_nor_boot.o
+                                      0xe56d2 (size before relaxing)
+ .debug_str     0x00000000000e6321      0xd79 ./utilities/fsl_debug_console.o
                                       0xe4f63 (size before relaxing)
- .debug_str     0x00000000000e7094      0x7a3 ./startup/startup_mimxrt1011.o
+ .debug_str     0x00000000000e709a      0x7a3 ./startup/startup_mimxrt1011.o
                                        0x36af (size before relaxing)
- .debug_str     0x00000000000e7837      0xc6c ./source/led_blinky.o
-                                      0xe5fc9 (size before relaxing)
- .debug_str     0x00000000000e84a3       0x1f ./source/semihost_hardfault.o
+ .debug_str     0x00000000000e783d      0xddb ./source/led_matrix_driver.o
+                                      0xe613e (size before relaxing)
+ .debug_str     0x00000000000e8618       0x1f ./source/semihost_hardfault.o
                                        0x2eda (size before relaxing)
- .debug_str     0x00000000000e84c2      0xcc0 ./drivers/fsl_clock.o
+ .debug_str     0x00000000000e8637      0xcc0 ./drivers/fsl_clock.o
                                       0xe4ff5 (size before relaxing)
- .debug_str     0x00000000000e9182      0x5df ./drivers/fsl_gpio.o
+ .debug_str     0x00000000000e92f7      0x5df ./drivers/fsl_gpio.o
                                       0xe48dd (size before relaxing)
- .debug_str     0x00000000000e9761     0x104f ./drivers/fsl_lpuart.o
+ .debug_str     0x00000000000e98d6     0x104f ./drivers/fsl_lpuart.o
                                       0xe5d1a (size before relaxing)
- .debug_str     0x00000000000ea7b0       0xca ./device/system_MIMXRT1011.o
+ .debug_str     0x00000000000ea925       0xca ./device/system_MIMXRT1011.o
                                       0xe2aba (size before relaxing)
- .debug_str     0x00000000000ea87a      0x337 ./component/uart/lpuart_adapter.o
+ .debug_str     0x00000000000ea9ef      0x337 ./component/uart/lpuart_adapter.o
                                       0xe49ee (size before relaxing)
- .debug_str     0x00000000000eabb1      0x3f5 ./component/serial_manager/serial_manager.o
+ .debug_str     0x00000000000ead26      0x3f5 ./component/serial_manager/serial_manager.o
                                       0xe420c (size before relaxing)
- .debug_str     0x00000000000eafa6       0xfc ./component/serial_manager/serial_port_uart.o
+ .debug_str     0x00000000000eb11b       0xfc ./component/serial_manager/serial_port_uart.o
                                       0xe424d (size before relaxing)
- .debug_str     0x00000000000eb0a2     0x57ad ./board/board.o
-                                      0xeaac3 (size before relaxing)
- .debug_str     0x00000000000f084f      0x284 ./board/clock_config.o
+ .debug_str     0x00000000000eb217     0x57ad ./board/board.o
+                                      0xeaac9 (size before relaxing)
+ .debug_str     0x00000000000f09c4      0x284 ./board/clock_config.o
                                       0xea91d (size before relaxing)
- .debug_str     0x00000000000f0ad3      0x193 ./board/pin_mux.o
+ .debug_str     0x00000000000f0c48      0x193 ./board/pin_mux.o
                                       0xe9ade (size before relaxing)
 
 .comment        0x0000000000000000       0x75
@@ -2477,7 +2477,7 @@ OUTPUT(evkmimxrt1010_iled_blinky_led_matrix_driver.axf elf32-littlearm)
  .comment       0x0000000000000075       0x76 ./xip/fsl_flexspi_nor_boot.o
  .comment       0x0000000000000075       0x76 ./utilities/fsl_debug_console.o
  .comment       0x0000000000000075       0x76 ./startup/startup_mimxrt1011.o
- .comment       0x0000000000000075       0x76 ./source/led_blinky.o
+ .comment       0x0000000000000075       0x76 ./source/led_matrix_driver.o
  .comment       0x0000000000000075       0x76 ./source/semihost_hardfault.o
  .comment       0x0000000000000075       0x76 ./drivers/fsl_clock.o
  .comment       0x0000000000000075       0x76 ./drivers/fsl_gpio.o
@@ -2532,7 +2532,7 @@ OUTPUT(evkmimxrt1010_iled_blinky_led_matrix_driver.axf elf32-littlearm)
  .ARM.attributes
                 0x00000000000000a6       0x34 ./startup/startup_mimxrt1011.o
  .ARM.attributes
-                0x00000000000000da       0x34 ./source/led_blinky.o
+                0x00000000000000da       0x34 ./source/led_matrix_driver.o
  .ARM.attributes
                 0x000000000000010e       0x34 ./source/semihost_hardfault.o
  .ARM.attributes
@@ -2627,7 +2627,7 @@ OUTPUT(evkmimxrt1010_iled_blinky_led_matrix_driver.axf elf32-littlearm)
 .debug_ranges   0x0000000000000000      0x800
  .debug_ranges  0x0000000000000000       0x70 ./utilities/fsl_debug_console.o
  .debug_ranges  0x0000000000000070      0x2d0 ./startup/startup_mimxrt1011.o
- .debug_ranges  0x0000000000000340       0x30 ./source/led_blinky.o
+ .debug_ranges  0x0000000000000340       0x30 ./source/led_matrix_driver.o
  .debug_ranges  0x0000000000000370       0x10 ./source/semihost_hardfault.o
  .debug_ranges  0x0000000000000380      0x110 ./drivers/fsl_clock.o
  .debug_ranges  0x0000000000000490       0x40 ./drivers/fsl_gpio.o
@@ -2643,7 +2643,7 @@ OUTPUT(evkmimxrt1010_iled_blinky_led_matrix_driver.axf elf32-littlearm)
 .debug_frame    0x0000000000000000     0x1e4c
  .debug_frame   0x0000000000000000      0x208 ./utilities/fsl_debug_console.o
  .debug_frame   0x0000000000000208      0x834 ./startup/startup_mimxrt1011.o
- .debug_frame   0x0000000000000a3c       0xc0 ./source/led_blinky.o
+ .debug_frame   0x0000000000000a3c       0xc0 ./source/led_matrix_driver.o
  .debug_frame   0x0000000000000afc       0x20 ./source/semihost_hardfault.o
  .debug_frame   0x0000000000000b1c      0x4b0 ./drivers/fsl_clock.o
  .debug_frame   0x0000000000000fcc      0x110 ./drivers/fsl_gpio.o
@@ -2672,17 +2672,17 @@ ADC_ETC_IRQ2_IRQHandler                           ./startup/startup_mimxrt1011.o
 ADC_ETC_IRQ3_DriverIRQHandler                     ./startup/startup_mimxrt1011.o
 ADC_ETC_IRQ3_IRQHandler                           ./startup/startup_mimxrt1011.o
 BOARD_BootClockRUN                                ./board/clock_config.o
-                                                  ./source/led_blinky.o
+                                                  ./source/led_matrix_driver.o
 BOARD_ConfigMPU                                   ./board/board.o
 BOARD_DebugConsoleSrcFreq                         ./board/board.o
 BOARD_InitBootClocks                              ./board/clock_config.o
 BOARD_InitBootPeripherals                         ./board/peripherals.o
 BOARD_InitBootPins                                ./board/pin_mux.o
 BOARD_InitDebugConsole                            ./board/board.o
-                                                  ./source/led_blinky.o
+                                                  ./source/led_matrix_driver.o
 BOARD_InitPeripherals                             ./board/peripherals.o
 BOARD_InitPins                                    ./board/pin_mux.o
-                                                  ./source/led_blinky.o
+                                                  ./source/led_matrix_driver.o
 CCM_1_DriverIRQHandler                            ./startup/startup_mimxrt1011.o
 CCM_1_IRQHandler                                  ./startup/startup_mimxrt1011.o
 CCM_2_DriverIRQHandler                            ./startup/startup_mimxrt1011.o
@@ -2806,7 +2806,7 @@ GPIO_PinInit                                      ./drivers/fsl_gpio.o
                                                   ./board/pin_mux.o
 GPIO_PinSetInterruptConfig                        ./drivers/fsl_gpio.o
 GPIO_PinWrite                                     ./drivers/fsl_gpio.o
-                                                  ./source/led_blinky.o
+                                                  ./source/led_matrix_driver.o
 GPR_IRQ_DriverIRQHandler                          ./startup/startup_mimxrt1011.o
 GPR_IRQ_IRQHandler                                ./startup/startup_mimxrt1011.o
 GPT1_DriverIRQHandler                             ./startup/startup_mimxrt1011.o
@@ -2962,12 +2962,12 @@ StrFormatPrintf                                   ./utilities/fsl_str.o
                                                   ./utilities/fsl_debug_console.o
 StrFormatScanf                                    ./utilities/fsl_str.o
                                                   ./utilities/fsl_debug_console.o
-SysTick_DelayTicks                                ./source/led_blinky.o
-SysTick_Handler                                   ./source/led_blinky.o
+SysTick_DelayTicks                                ./source/led_matrix_driver.o
+SysTick_Handler                                   ./source/led_matrix_driver.o
                                                   ./startup/startup_mimxrt1011.o
 SystemCoreClock                                   ./device/system_MIMXRT1011.o
                                                   ./board/clock_config.o
-                                                  ./source/led_blinky.o
+                                                  ./source/led_matrix_driver.o
 SystemCoreClockUpdate                             ./device/system_MIMXRT1011.o
 SystemInit                                        ./device/system_MIMXRT1011.o
                                                   ./startup/startup_mimxrt1011.o
@@ -3122,16 +3122,16 @@ ftell                                             /Applications/MCUXpressoIDE_11
                                                   /Applications/MCUXpressoIDE_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.macosx_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_c.a(fseek.o)
 g_pfnVectors                                      ./startup/startup_mimxrt1011.o
                                                   ./device/system_MIMXRT1011.o
-g_pinSet                                          ./source/led_blinky.o
+g_pinSet                                          ./source/led_matrix_driver.o
 g_rtcXtalFreq                                     ./drivers/fsl_clock.o
                                                   ./board/clock_config.o
 g_serialHandle                                    ./utilities/fsl_debug_console.o
-g_systickCounter                                  ./source/led_blinky.o
+g_systickCounter                                  ./source/led_matrix_driver.o
 g_xtalFreq                                        ./drivers/fsl_clock.o
                                                   ./board/clock_config.o
                                                   ./board/board.o
 image_vector_table                                ./xip/fsl_flexspi_nor_boot.o
-main                                              ./source/led_blinky.o
+main                                              ./source/led_matrix_driver.o
                                                   /Applications/MCUXpressoIDE_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.macosx_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_nohost_nf.a(_cr__main.o)
 malloc                                            /Applications/MCUXpressoIDE_11.0.1_2563/ide/plugins/com.nxp.mcuxpresso.tools.macosx_11.0.1.201907311258/tools/bin/../lib/gcc/arm-none-eabi/8.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libcr_c.a(alloc.o)
                                                   ./drivers/fsl_common.o

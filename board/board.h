@@ -3,6 +3,10 @@
  * All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
+ *
+ * Modified by Nick Bild for:
+ * NXP MIMXRT1010-EVK LED Matrix Driver
+ * https://github.com/nickbild/nxp_led_matrix_driver
  */
 
 #ifndef _BOARD_H_
@@ -47,41 +51,38 @@
 /*! @brief The USER_LED used for board */
 #define LOGIC_LED_ON (0U)
 #define LOGIC_LED_OFF (1U)
-#ifndef BOARD_USER_LED_GPIO
-#define BOARD_USER_LED_GPIO GPIO1
+#ifndef BOARD_USER_GPIO
+#define BOARD_USER_GPIO GPIO1
 #endif
-#ifndef BOARD_USER_LED_GPIO_PIN
-#define BOARD_USER_LED_GPIO_PIN (11U)
+#ifndef BOARD_USER_AD1_GPIO_PIN
+#define BOARD_USER_AD1_GPIO_PIN (15U)
 #endif
-#ifndef BOARD_USER_D1_GPIO_PIN
-#define BOARD_USER_D1_GPIO_PIN (15U)
+#ifndef BOARD_USER_AD2_GPIO_PIN
+#define BOARD_USER_AD2_GPIO_PIN (16U)
 #endif
-#ifndef BOARD_USER_D2_GPIO_PIN
-#define BOARD_USER_D2_GPIO_PIN (16U)
+#ifndef BOARD_USER_AD3_GPIO_PIN
+#define BOARD_USER_AD3_GPIO_PIN (17U)
 #endif
-#ifndef BOARD_USER_D3_GPIO_PIN
-#define BOARD_USER_D3_GPIO_PIN (17U)
+#ifndef BOARD_USER_AD4_GPIO_PIN
+#define BOARD_USER_AD4_GPIO_PIN (18U)
 #endif
-#ifndef BOARD_USER_D4_GPIO_PIN
-#define BOARD_USER_D4_GPIO_PIN (18U)
+#ifndef BOARD_USER_AD5_GPIO_PIN
+#define BOARD_USER_AD5_GPIO_PIN (19U)
 #endif
-#ifndef BOARD_USER_D5_GPIO_PIN
-#define BOARD_USER_D5_GPIO_PIN (19U)
+#ifndef BOARD_USER_AD6_GPIO_PIN
+#define BOARD_USER_AD6_GPIO_PIN (20U)
 #endif
-#ifndef BOARD_USER_D6_GPIO_PIN
-#define BOARD_USER_D6_GPIO_PIN (20U)
+#ifndef BOARD_USER_AD7_GPIO_PIN
+#define BOARD_USER_AD7_GPIO_PIN (21U)
 #endif
-#ifndef BOARD_USER_D7_GPIO_PIN
-#define BOARD_USER_D7_GPIO_PIN (21U)
+#ifndef BOARD_USER_AD9_GPIO_PIN
+#define BOARD_USER_AD9_GPIO_PIN (23U)
 #endif
-#ifndef BOARD_USER_D9_GPIO_PIN
-#define BOARD_USER_D9_GPIO_PIN (23U)
+#ifndef BOARD_USER_AD10_GPIO_PIN
+#define BOARD_USER_AD10_GPIO_PIN (24U)
 #endif
-#ifndef BOARD_USER_D10_GPIO_PIN
-#define BOARD_USER_D10_GPIO_PIN (24U)
-#endif
-#ifndef BOARD_USER_D14_GPIO_PIN
-#define BOARD_USER_D14_GPIO_PIN (28U)
+#ifndef BOARD_USER_AD14_GPIO_PIN
+#define BOARD_USER_AD14_GPIO_PIN (28U)
 #endif
 #ifndef BOARD_USER_2_GPIO_PIN
 #define BOARD_USER_2_GPIO_PIN (2U)
