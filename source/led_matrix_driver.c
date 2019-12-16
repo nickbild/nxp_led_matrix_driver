@@ -8,7 +8,7 @@
 
 #include "board.h"
 #include "pin_mux.h"
-#include "clock_config.h"
+#include "cr_section_macros.h"
 
 /*******************************************************************************
  * Definitions
@@ -52,7 +52,7 @@ const int changeImageFrames = 6000;  // Set to -1 to display a single image.  La
 #define numImages 4  // >1 means animation.
 
 // Data to display.
-int brightnessR[numImages][32][32] = {
+__DATA(RAM3) int brightnessR[numImages][32][32] = {
                               {
                                 {13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13},
                                 {13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13,13},
@@ -191,7 +191,7 @@ int brightnessR[numImages][32][32] = {
                               }
                            };
 
-int brightnessG[numImages][32][32] = {
+__DATA(RAM3) int brightnessG[numImages][32][32] = {
                               {
                                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1},
                                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -330,7 +330,7 @@ int brightnessG[numImages][32][32] = {
                               }
                            };
 
-int brightnessB[numImages][32][32] = {
+__DATA(RAM3) int brightnessB[numImages][32][32] = {
                               {
                                 {17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17},
                                 {17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17,17},
@@ -472,61 +472,15 @@ int brightnessB[numImages][32][32] = {
 /*******************************************************************************
  * Code
  ******************************************************************************/
-void SysTick_Handler(void)
-{
-    if (g_systickCounter != 0U)
-    {
-        g_systickCounter--;
-    }
-}
 
-void SysTick_DelayTicks(uint32_t n)
-{
-    g_systickCounter = n;
-    while (g_systickCounter != 0U)
-    {
-    }
-}
-
-/*!
- * @brief Main function
- */
 int main(void)
 {
     BOARD_InitPins();
-    BOARD_BootClockRUN();
     BOARD_InitDebugConsole();
-
-    /* Set systick reload value to generate 1ms interrupt */
-    if (SysTick_Config(SystemCoreClock / 1000U))
-    {
-        while (1)
-        {
-        }
-    }
 
     /* Main program loop */
     while (1)
     {
-
-
-//        /* Delay 1000 ms */
-//        SysTick_DelayTicks(100U);
-//
-//        if (g_pinSet)
-//        {
-//            GPIO_PinWrite(BOARD_USER_GPIO, pinG1, 0U);
-//            g_pinSet = false;
-//        }
-//        else
-//        {
-//            GPIO_PinWrite(BOARD_USER_GPIO, pinG1, 1U);
-//            g_pinSet = true;
-//        }
-
-
-
-
         // Send on/off bits for each LED (32 columns, R/G/B LED per column), and for top and bottom rows.
 	  for (int i=0; i<32; i++){
 		// Upper rows.
@@ -627,11 +581,6 @@ int main(void)
 		  imgNum = 0;
 		}
 	  }
-
-
-
-
-
     }
-
 }
+
