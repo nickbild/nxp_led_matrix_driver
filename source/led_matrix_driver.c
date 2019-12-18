@@ -36,9 +36,6 @@
 /*******************************************************************************
  * Variables
  ******************************************************************************/
-volatile uint32_t g_systickCounter;
-/* The PIN status */
-volatile bool g_pinSet = false;
 
 // Current state of matrix.
 int currentRow = 0;
@@ -52,7 +49,7 @@ const int changeImageFrames = 6000;  // Set to -1 to display a single image.  La
 #define numImages 4  // >1 means animation.
 
 // Data to display.
-__DATA(RAM3) int brightnessR[numImages][32][32] = {
+__RODATA(Flash2) const int brightnessR[numImages][32][32] = {
                               {
                                 {13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13},
                                 {13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13,13},
@@ -191,7 +188,7 @@ __DATA(RAM3) int brightnessR[numImages][32][32] = {
                               }
                            };
 
-__DATA(RAM3) int brightnessG[numImages][32][32] = {
+__RODATA(Flash2) const int brightnessG[numImages][32][32] = {
                               {
                                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1},
                                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -330,7 +327,7 @@ __DATA(RAM3) int brightnessG[numImages][32][32] = {
                               }
                            };
 
-__DATA(RAM3) int brightnessB[numImages][32][32] = {
+__RODATA(Flash2) const int brightnessB[numImages][32][32] = {
                               {
                                 {17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17},
                                 {17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17,17},
