@@ -37,11 +37,6 @@ extern "C" {
  */
 void BOARD_InitBootPins(void);
 
-/* GPIO_11 (number 1), GPIO_11 */
-#define BOARD_GPIO_11_PERIPHERAL                                           GPIO1   /*!< Device name: GPIO1 */
-#define BOARD_GPIO_11_SIGNAL                                          gpiomux_io   /*!< GPIO1 signal: gpiomux_io */
-#define BOARD_GPIO_11_CHANNEL                                                11U   /*!< GPIO1 gpiomux_io channel: 11 */
-
 /* GPIO_AD_01 (number 59), ADC12_1/J26[10]/J56[14] */
 #define BOARD_ADC12_1_PERIPHERAL                                           GPIO1   /*!< Device name: GPIO1 */
 #define BOARD_ADC12_1_SIGNAL                                          gpiomux_io   /*!< GPIO1 signal: gpiomux_io */

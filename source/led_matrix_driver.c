@@ -8,6 +8,7 @@
 
 #include "board.h"
 #include "pin_mux.h"
+//#include "clock_config.h"
 #include "cr_section_macros.h"
 
 /*******************************************************************************
@@ -37,19 +38,22 @@
  * Variables
  ******************************************************************************/
 
+volatile uint32_t g_systickCounter;
+
 // Current state of matrix.
-int currentRow = 0;
-int frame = 1;  // A "frame" is defined here as one draw of all rows on the matix.
-const int totalFrames = 35; // PWM pattern restarts after this many frames are drawn (higher == greater resolution == more colors; too high == flicker).
+int currentRow = 0U;
+int frame = 1U;  // A "frame" is defined here as one draw of all rows on the matrix.
+const int totalFrames = 20U; // PWM pattern restarts after this many frames are drawn (higher == greater resolution == more colors; too high == flicker).
 
 // Animation control.
-int imgNum = 0;
-int framesElapsed = 0;
-const int changeImageFrames = 6000;  // Set to -1 to display a single image.  Larger number == longer delay between image changes.
-#define numImages 4  // >1 means animation.
+int imgNum = 0U;
+int framesElapsed = 0U;
+const int changeImageFrames = 6000U;  // Set to -1 to display a single image.  Larger number == longer delay between image changes.
+#define numImages 4U  // >1 means animation.
 
 // Data to display.
-__RODATA(Flash2) const int brightnessR[numImages][32][32] = {
+//__RODATA(Flash2) TODO
+__DATA(RAM3) const int brightnessR[numImages][32][32] = {
                               {
                                 {13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13},
                                 {13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13,13},
@@ -188,7 +192,7 @@ __RODATA(Flash2) const int brightnessR[numImages][32][32] = {
                               }
                            };
 
-__RODATA(Flash2) const int brightnessG[numImages][32][32] = {
+__DATA(RAM3) const int brightnessG[numImages][32][32] = {
                               {
                                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1},
                                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -327,7 +331,7 @@ __RODATA(Flash2) const int brightnessG[numImages][32][32] = {
                               }
                            };
 
-__RODATA(Flash2) const int brightnessB[numImages][32][32] = {
+__DATA(RAM3) const int brightnessB[numImages][32][32] = {
                               {
                                 {17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17},
                                 {17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17,17},
@@ -470,15 +474,38 @@ __RODATA(Flash2) const int brightnessB[numImages][32][32] = {
  * Code
  ******************************************************************************/
 
+//void SysTick_Handler(void)
+//{
+//    if (g_systickCounter != 0U)
+//    {
+//        g_systickCounter--;
+//    }
+//}
+//
+//void SysTick_DelayTicks(uint32_t n)
+//{
+//    g_systickCounter = n;
+//    while (g_systickCounter != 0U)
+//    {
+//    }
+//}
+
 int main(void)
 {
     BOARD_InitPins();
-    BOARD_InitDebugConsole();
+
+    /* Set systick reload value to generate 1ms interrupt */
+//	if (SysTick_Config(SystemCoreClock / 1000U))
+//	{
+//		while (1)
+//		{
+//		}
+//	}
 
     /* Main program loop */
     while (1)
     {
-        // Send on/off bits for each LED (32 columns, R/G/B LED per column), and for top and bottom rows.
+      // Send on/off bits for each LED (32 columns, R/G/B LED per column), and for top and bottom rows.
 	  for (int i=0; i<32; i++){
 		// Upper rows.
 		if (frame <= brightnessR[imgNum][currentRow][i]) {
@@ -500,19 +527,19 @@ int main(void)
 		}
 
 		// Lower rows.
-		if (frame <= brightnessR[imgNum][currentRow+16][i]) {
+		if (frame <= brightnessR[imgNum][currentRow+16U][i]) {
 			GPIO_PinWrite(BOARD_USER_GPIO, pinR2, 1U);
 		} else {
 			GPIO_PinWrite(BOARD_USER_GPIO, pinR2, 0U);
 		}
 
-		if (frame <= brightnessG[imgNum][currentRow+16][i]) {
+		if (frame <= brightnessG[imgNum][currentRow+16U][i]) {
 			GPIO_PinWrite(BOARD_USER_GPIO, pinG2, 1U);
 		} else {
 			GPIO_PinWrite(BOARD_USER_GPIO, pinG2, 0U);
 		}
 
-		if (frame <= brightnessB[imgNum][currentRow+16][i]) {
+		if (frame <= brightnessB[imgNum][currentRow+16U][i]) {
 			GPIO_PinWrite(BOARD_USER_GPIO, pinB2, 1U);
 		} else {
 			GPIO_PinWrite(BOARD_USER_GPIO, pinB2, 0U);
@@ -528,25 +555,25 @@ int main(void)
 	  GPIO_PinWrite(BOARD_USER_GPIO, pinOE, 0U);
 
 	  // Set current row.
-	  if (bitRead(currentRow, 0) == 1) {
+	  if (bitRead(currentRow, 0) == 1U) {
 		  GPIO_PinWrite(BOARD_USER_GPIO, selectA, 1U);
 		} else {
 			GPIO_PinWrite(BOARD_USER_GPIO, selectA, 0U);
 		}
 
-	  if (bitRead(currentRow, 1) == 1) {
+	  if (bitRead(currentRow, 1) == 1U) {
 		  GPIO_PinWrite(BOARD_USER_GPIO, selectB, 1U);
 		} else {
 			GPIO_PinWrite(BOARD_USER_GPIO, selectB, 0U);
 		}
 
-	  if (bitRead(currentRow, 2) == 1) {
+	  if (bitRead(currentRow, 2) == 1U) {
 		  GPIO_PinWrite(BOARD_USER_GPIO, selectC, 1U);
 		} else {
 			GPIO_PinWrite(BOARD_USER_GPIO, selectC, 0U);
 		}
 
-	  if (bitRead(currentRow, 3) == 1) {
+	  if (bitRead(currentRow, 3) == 1U) {
 		  GPIO_PinWrite(BOARD_USER_GPIO, selectD, 1U);
 		} else {
 			GPIO_PinWrite(BOARD_USER_GPIO, selectD, 0U);
@@ -558,12 +585,12 @@ int main(void)
 
 	  // Move to next row.
 	  currentRow++;
-	  if (currentRow == 16) {
-		currentRow = 0;
+	  if (currentRow == 16U) {
+		currentRow = 0U;
 
 		frame++;
 		if (frame > totalFrames) {
-		  frame = 1;
+		  frame = 1U;
 		}
 
 		framesElapsed++;
@@ -571,13 +598,12 @@ int main(void)
 
 	  // Control image change speed.
 	  if (framesElapsed >= changeImageFrames) {
-		framesElapsed = 0;
+		framesElapsed = 0U;
 
 		imgNum++;
 		if (imgNum == numImages) {
-		  imgNum = 0;
+		  imgNum = 0U;
 		}
 	  }
     }
 }
-
