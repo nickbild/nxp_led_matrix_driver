@@ -93,6 +93,9 @@
 #ifndef BOARD_USER_10_GPIO_PIN
 #define BOARD_USER_10_GPIO_PIN (10U)
 #endif
+#ifndef BOARD_USER_1_GPIO_PIN
+#define BOARD_USER_1_GPIO_PIN (1U)
+#endif
 
 /*! @brief Define the port interrupt number for the board switches */
 #ifndef BOARD_USER_BUTTON_GPIO

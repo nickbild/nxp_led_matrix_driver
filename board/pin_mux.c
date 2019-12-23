@@ -36,20 +36,32 @@ void BOARD_InitBootPins(void) {
 BOARD_InitPins:
 - options: {callFromInitBoot: 'true', prefix: BOARD_, coreID: core0, enableClock: 'true'}
 - pin_list:
-  - {pin_num: '59', peripheral: GPIO1, signal: 'gpiomux_io, 15', pin_signal: GPIO_AD_01, direction: OUTPUT, gpio_init_state: 'false', slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '58', peripheral: GPIO1, signal: 'gpiomux_io, 16', pin_signal: GPIO_AD_02, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '57', peripheral: GPIO1, signal: 'gpiomux_io, 17', pin_signal: GPIO_AD_03, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '56', peripheral: GPIO1, signal: 'gpiomux_io, 18', pin_signal: GPIO_AD_04, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '55', peripheral: GPIO1, signal: 'gpiomux_io, 19', pin_signal: GPIO_AD_05, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '52', peripheral: GPIO1, signal: 'gpiomux_io, 20', pin_signal: GPIO_AD_06, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '51', peripheral: GPIO1, signal: 'gpiomux_io, 21', pin_signal: GPIO_AD_07, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '48', peripheral: GPIO1, signal: 'gpiomux_io, 23', pin_signal: GPIO_AD_09, direction: OUTPUT, speed: MHZ_100, drive_strength: R0_4, pull_up_down_config: Pull_Down_100K_Ohm}
-  - {pin_num: '47', peripheral: GPIO1, signal: 'gpiomux_io, 24', pin_signal: GPIO_AD_10, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Keeper,
-    pull_up_down_config: Pull_Down_100K_Ohm, hysteresis_enable: Disable}
-  - {pin_num: '43', peripheral: GPIO1, signal: 'gpiomux_io, 28', pin_signal: GPIO_AD_14, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '11', peripheral: GPIO1, signal: 'gpiomux_io, 02', pin_signal: GPIO_02, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '3', peripheral: GPIO1, signal: 'gpiomux_io, 09', pin_signal: GPIO_09, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
-  - {pin_num: '2', peripheral: GPIO1, signal: 'gpiomux_io, 10', pin_signal: GPIO_10, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100}
+  - {pin_num: '59', peripheral: GPIO1, signal: 'gpiomux_io, 15', pin_signal: GPIO_AD_01, direction: OUTPUT, gpio_init_state: 'false', slew_rate: Fast, speed: MHZ_100,
+    pull_keeper_select: Pull, pull_keeper_enable: Disable}
+  - {pin_num: '58', peripheral: GPIO1, signal: 'gpiomux_io, 16', pin_signal: GPIO_AD_02, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
+  - {pin_num: '57', peripheral: GPIO1, signal: 'gpiomux_io, 17', pin_signal: GPIO_AD_03, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
+  - {pin_num: '56', peripheral: GPIO1, signal: 'gpiomux_io, 18', pin_signal: GPIO_AD_04, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
+  - {pin_num: '55', peripheral: GPIO1, signal: 'gpiomux_io, 19', pin_signal: GPIO_AD_05, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
+  - {pin_num: '52', peripheral: GPIO1, signal: 'gpiomux_io, 20', pin_signal: GPIO_AD_06, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
+  - {pin_num: '51', peripheral: GPIO1, signal: 'gpiomux_io, 21', pin_signal: GPIO_AD_07, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
+  - {pin_num: '48', peripheral: GPIO1, signal: 'gpiomux_io, 23', pin_signal: GPIO_AD_09, direction: OUTPUT, speed: MHZ_100, drive_strength: R0_4, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable, pull_up_down_config: Pull_Down_100K_Ohm}
+  - {pin_num: '47', peripheral: GPIO1, signal: 'gpiomux_io, 24', pin_signal: GPIO_AD_10, direction: OUTPUT, slew_rate: Fast, speed: MHZ_150, drive_strength: R0_4,
+    pull_keeper_select: Pull, pull_keeper_enable: Disable, pull_up_down_config: Pull_Down_100K_Ohm, hysteresis_enable: Disable}
+  - {pin_num: '43', peripheral: GPIO1, signal: 'gpiomux_io, 28', pin_signal: GPIO_AD_14, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
+  - {pin_num: '11', peripheral: GPIO1, signal: 'gpiomux_io, 02', pin_signal: GPIO_02, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
+  - {pin_num: '3', peripheral: GPIO1, signal: 'gpiomux_io, 09', pin_signal: GPIO_09, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
+  - {pin_num: '2', peripheral: GPIO1, signal: 'gpiomux_io, 10', pin_signal: GPIO_10, direction: OUTPUT, slew_rate: Fast, speed: MHZ_100, pull_keeper_select: Pull,
+    pull_keeper_enable: Disable}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 
@@ -224,132 +236,132 @@ void BOARD_InitPins(void) {
     );
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_02_GPIOMUX_IO02,            /* GPIO_02 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_09_GPIOMUX_IO09,            /* GPIO_09 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_10_GPIOMUX_IO10,            /* GPIO_10 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_01_GPIOMUX_IO15,         /* GPIO_AD_01 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_02_GPIOMUX_IO16,         /* GPIO_AD_02 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_03_GPIOMUX_IO17,         /* GPIO_AD_03 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_04_GPIOMUX_IO18,         /* GPIO_AD_04 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_05_GPIOMUX_IO19,         /* GPIO_AD_05 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_06_GPIOMUX_IO20,         /* GPIO_AD_06 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_07_GPIOMUX_IO21,         /* GPIO_AD_07 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_09_GPIOMUX_IO23,         /* GPIO_AD_09 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_10_GPIOMUX_IO24,         /* GPIO_AD_10 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x20A1U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
-                                                 Speed Field: medium(100MHz)
+                                                 Speed Field: fast(150MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
   IOMUXC_SetPinConfig(
       IOMUXC_GPIO_AD_14_GPIOMUX_IO28,         /* GPIO_AD_14 PAD functional properties : */
-      0x1061U);                               /* Slew Rate Field: Fast Slew Rate
+      0x2061U);                               /* Slew Rate Field: Fast Slew Rate
                                                  Drive Strength Field: R0/4
                                                  Speed Field: medium(100MHz)
                                                  Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
+                                                 Pull / Keep Enable Field: Pull/Keeper Disabled
+                                                 Pull / Keep Select Field: Pull
                                                  Pull Up / Down Config. Field: 100K Ohm Pull Down
                                                  Hyst. Enable Field: Hysteresis Disabled */
 }

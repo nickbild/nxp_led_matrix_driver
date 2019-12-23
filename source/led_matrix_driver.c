@@ -8,7 +8,6 @@
 
 #include "board.h"
 #include "pin_mux.h"
-//#include "clock_config.h"
 #include "cr_section_macros.h"
 
 /*******************************************************************************
@@ -37,8 +36,6 @@
 /*******************************************************************************
  * Variables
  ******************************************************************************/
-
-volatile uint32_t g_systickCounter;
 
 // Current state of matrix.
 int currentRow = 0U;
@@ -474,33 +471,9 @@ __DATA(RAM3) const int brightnessB[numImages][32][32] = {
  * Code
  ******************************************************************************/
 
-//void SysTick_Handler(void)
-//{
-//    if (g_systickCounter != 0U)
-//    {
-//        g_systickCounter--;
-//    }
-//}
-//
-//void SysTick_DelayTicks(uint32_t n)
-//{
-//    g_systickCounter = n;
-//    while (g_systickCounter != 0U)
-//    {
-//    }
-//}
-
 int main(void)
 {
     BOARD_InitPins();
-
-    /* Set systick reload value to generate 1ms interrupt */
-//	if (SysTick_Config(SystemCoreClock / 1000U))
-//	{
-//		while (1)
-//		{
-//		}
-//	}
 
     /* Main program loop */
     while (1)
