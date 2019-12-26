@@ -22,6 +22,9 @@
 /*! @brief The board name */
 #define BOARD_NAME "MIMXRT1010-EVK"
 
+// 500MHz system clock.
+#define BOARD_MAINCLOCKRATE 500000000U
+
 /* The UART to use for debug messages. */
 #define BOARD_DEBUG_UART_TYPE kSerialPort_Uart
 #define BOARD_DEBUG_UART_BASEADDR (uint32_t) LPUART1

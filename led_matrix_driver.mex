@@ -59,7 +59,7 @@
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="gpio_init_state" value="false"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -68,7 +68,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -77,7 +77,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -86,7 +86,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -95,7 +95,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -104,7 +104,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -113,7 +113,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -121,7 +121,7 @@
                   <pin peripheral="GPIO1" signal="gpiomux_io, 23" pin_num="48" pin_signal="GPIO_AD_09">
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="drive_strength" value="R0_4"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
@@ -132,7 +132,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_150"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="drive_strength" value="R0_4"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
@@ -144,7 +144,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -153,7 +153,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -162,7 +162,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
@@ -171,7 +171,7 @@
                      <pin_features>
                         <pin_feature name="direction" value="OUTPUT"/>
                         <pin_feature name="slew_rate" value="Fast"/>
-                        <pin_feature name="speed" value="MHZ_100"/>
+                        <pin_feature name="speed" value="MHZ_200"/>
                         <pin_feature name="pull_keeper_select" value="Pull"/>
                         <pin_feature name="pull_keeper_enable" value="Disable"/>
                      </pin_features>
