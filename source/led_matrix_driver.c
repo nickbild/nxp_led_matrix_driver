@@ -49,7 +49,7 @@
 #define numImages 3  // >1 means animation.
 #define changeImageFrames 6000  // Animation control. Set to -1 to display a single image.  Larger number == longer delay between image changes.
 
-__DATA(RAM2) const unsigned short int brightnessR[numImages][32][32] = {
+__RODATA(Flash2) const unsigned short int brightnessR[numImages][32][32] = {
   {
 	{13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13},
 	{13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13,13},
@@ -154,7 +154,7 @@ __DATA(RAM2) const unsigned short int brightnessR[numImages][32][32] = {
   }
 };
 
-__DATA(RAM2) const unsigned short int brightnessG[numImages][32][32] = {
+__RODATA(Flash2) const unsigned short int brightnessG[numImages][32][32] = {
   {
 	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1},
 	{1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -259,7 +259,7 @@ __DATA(RAM2) const unsigned short int brightnessG[numImages][32][32] = {
   }
 };
 
-__DATA(RAM2) const unsigned short int brightnessB[numImages][32][32] = {
+__RODATA(Flash2) const unsigned short int brightnessB[numImages][32][32] = {
   {
 	{17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17},
 	{17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17,17},
