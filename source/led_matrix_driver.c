@@ -40,8 +40,9 @@
 
 // Current state of matrix.
 unsigned short int currentRow = 0;
+unsigned short int currentRowBottom = 0;
 unsigned short int frame = 1;  // A "frame" is defined here as one draw of all rows on the matrix.
-#define totalFrames 30 // PWM pattern restarts after this many frames are drawn (higher == greater resolution == more colors; too high == flicker).
+#define totalFrames 32 // PWM pattern restarts after this many frames are drawn (higher == greater resolution == more colors; too high == flicker).
 
 // Animation control.
 unsigned short int imgNum = 0;
@@ -49,9 +50,17 @@ unsigned short int framesElapsed = 0;
 #define changeImageFrames 6000  // Set to -1 to display a single image.  Larger number == longer delay between image changes.
 #define numImages 3  // >1 means animation.
 
+// Track state of pins to prevent slowdown from "switching" to
+// the state the pin is already in.
+unsigned short int r1_on = 0;
+unsigned short int g1_on = 0;
+unsigned short int b1_on = 0;
+unsigned short int r2_on = 0;
+unsigned short int g2_on = 0;
+unsigned short int b2_on = 0;
 
 // Data to display.
-__DATA(RAM1) const unsigned short int brightnessR[numImages][32][32] = {
+__DATA(RAM2) const unsigned short int brightnessR[numImages][32][32] = {
                               {
                                 {13,13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13},
                                 {13,13,13,13,13,13,13,13,13,13,13,13,13,13,0,0,0,0,0,0,13,13,13,13,13,13,13,13,13,13,13,13},
@@ -156,7 +165,7 @@ __DATA(RAM1) const unsigned short int brightnessR[numImages][32][32] = {
                               }
                            };
 
-__DATA(RAM1) const unsigned short int brightnessG[numImages][32][32] = {
+__DATA(RAM2) const unsigned short int brightnessG[numImages][32][32] = {
                               {
                                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1},
                                 {1,1,1,1,1,1,1,1,1,1,1,1,1,1,15,15,15,8,15,15,1,1,1,1,1,1,1,1,1,1,1,1},
@@ -261,7 +270,7 @@ __DATA(RAM1) const unsigned short int brightnessG[numImages][32][32] = {
                               }
                            };
 
-__DATA(RAM1) const unsigned short int brightnessB[numImages][32][32] = {
+__DATA(RAM2) const unsigned short int brightnessB[numImages][32][32] = {
                               {
                                 {17,17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17},
                                 {17,17,17,17,17,17,17,17,17,17,17,17,17,17,0,0,0,0,0,0,17,17,17,17,17,17,17,17,17,17,17,17},
@@ -370,116 +379,152 @@ __DATA(RAM1) const unsigned short int brightnessB[numImages][32][32] = {
  * Code
  ******************************************************************************/
 
-QUICKACCESS_SECTION_CODE(void main(void));
 QUICKACCESS_SECTION_CODE(void matrix_draw(void));
 
 void main(void) {
-    BOARD_InitPins();
+	BOARD_InitPins();
     matrix_draw();
 }
 
 void matrix_draw() {
-	    while (1)
-	    {
-	      // Send on/off bits for each LED (32 columns, R/G/B LED per column), and for top and bottom rows.
-		  for (unsigned short int i=0; i<32; i++){
+	while(1) {
+		currentRowBottom = currentRow + 16;
+
+		// Send on/off bits for each LED (32 columns, R/G/B LED per column), and for top-half and bottom-half rows.
+		for (unsigned short int i=0; i<32; i++) {
 			// Upper rows.
 			if (frame <= brightnessR[imgNum][currentRow][i]) {
-				BOARD_USER_GPIO->DR |= (1UL << pinR1);
+				if (!r1_on) {
+					BOARD_USER_GPIO->DR |= (1UL << pinR1);
+					r1_on = 1;
+				}
 			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << pinR1);
+				if (r1_on) {
+					BOARD_USER_GPIO->DR &= ~(1UL << pinR1);
+					r1_on = 0;
+				}
 			}
 
 			if (frame <= brightnessG[imgNum][currentRow][i]) {
-				BOARD_USER_GPIO->DR |= (1UL << pinG1);
+				if (!g1_on) {
+					BOARD_USER_GPIO->DR |= (1UL << pinG1);
+					g1_on = 1;
+				}
 			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << pinG1);
+				if (g1_on) {
+					BOARD_USER_GPIO->DR &= ~(1UL << pinG1);
+					g1_on = 0;
+				}
 			}
 
 			if (frame <= brightnessB[imgNum][currentRow][i]) {
-				BOARD_USER_GPIO->DR |= (1UL << pinB1);
+				if (!b1_on) {
+					BOARD_USER_GPIO->DR |= (1UL << pinB1);
+					b1_on = 1;
+				}
 			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << pinB1);
+				if (b1_on) {
+					BOARD_USER_GPIO->DR &= ~(1UL << pinB1);
+					b1_on = 0;
+				}
 			}
 
 			// Lower rows.
-			if (frame <= brightnessR[imgNum][currentRow+16][i]) {
-				BOARD_USER_GPIO->DR |= (1UL << pinR2);
+			if (frame <= brightnessR[imgNum][currentRowBottom][i]) {
+				if (!r2_on) {
+					BOARD_USER_GPIO->DR |= (1UL << pinR2);
+					r2_on = 1;
+				}
 			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << pinR2);
+				if (r2_on) {
+					BOARD_USER_GPIO->DR &= ~(1UL << pinR2);
+					r2_on = 0;
+				}
 			}
 
-			if (frame <= brightnessG[imgNum][currentRow+16][i]) {
-				BOARD_USER_GPIO->DR |= (1UL << pinG2);
+			if (frame <= brightnessG[imgNum][currentRowBottom][i]) {
+				if (!g2_on) {
+					BOARD_USER_GPIO->DR |= (1UL << pinG2);
+					g2_on = 1;
+				}
 			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << pinG2);
+				if (g2_on) {
+					BOARD_USER_GPIO->DR &= ~(1UL << pinG2);
+					g2_on = 0;
+				}
 			}
 
-			if (frame <= brightnessB[imgNum][currentRow+16][i]) {
-				BOARD_USER_GPIO->DR |= (1UL << pinB2);
+			if (frame <= brightnessB[imgNum][currentRowBottom][i]) {
+				if (!b2_on) {
+					BOARD_USER_GPIO->DR |= (1UL << pinB2);
+					b2_on = 1;
+				}
 			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << pinB2);
+				if (b2_on) {
+					BOARD_USER_GPIO->DR &= ~(1UL << pinB2);
+					b2_on = 0;
+				}
 			}
 
 			// Hit clock to indicate pixel values are set.
 			BOARD_USER_GPIO->DR |= (1UL << pinClk);
 			BOARD_USER_GPIO->DR &= ~(1UL << pinClk);
-		  }
+		}
 
-		  // Turn off LEDs before turning on current row.
-		  //BOARD_USER_GPIO->DR |= (1UL << pinOE);
-		  //BOARD_USER_GPIO->DR &= ~(1UL << pinOE);
+		// Turn off LEDs before turning on current row.
+		//BOARD_USER_GPIO->DR |= (1UL << pinOE);
+		//BOARD_USER_GPIO->DR &= ~(1UL << pinOE);
 
-		  // Set current row.
-		  if (bitRead(currentRow, 0) == 1) {
-			  BOARD_USER_GPIO->DR |= (1UL << selectA);
-			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << selectA);
-			}
+		// Set current row.
+		if (bitRead(currentRow, 0)) {
+			BOARD_USER_GPIO->DR |= (1UL << selectA);
+		} else {
+			BOARD_USER_GPIO->DR &= ~(1UL << selectA);
+		}
 
-		  if (bitRead(currentRow, 1) == 1) {
-			  BOARD_USER_GPIO->DR |= (1UL << selectB);
-			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << selectB);
-			}
+		if (bitRead(currentRow, 1)) {
+			BOARD_USER_GPIO->DR |= (1UL << selectB);
+		} else {
+			BOARD_USER_GPIO->DR &= ~(1UL << selectB);
+		}
 
-		  if (bitRead(currentRow, 2) == 1) {
-			  BOARD_USER_GPIO->DR |= (1UL << selectC);
-			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << selectC);
-			}
+		if (bitRead(currentRow, 2)) {
+			BOARD_USER_GPIO->DR |= (1UL << selectC);
+		} else {
+			BOARD_USER_GPIO->DR &= ~(1UL << selectC);
+		}
 
-		  if (bitRead(currentRow, 3) == 1) {
-			  BOARD_USER_GPIO->DR |= (1UL << selectD);
-			} else {
-				BOARD_USER_GPIO->DR &= ~(1UL << selectD);
-			}
+		if (bitRead(currentRow, 3)) {
+			BOARD_USER_GPIO->DR |= (1UL << selectD);
+		} else {
+			BOARD_USER_GPIO->DR &= ~(1UL << selectD);
+		}
 
-		  // All data is in.  Latch current row.
-		  BOARD_USER_GPIO->DR |= (1UL << latch);
-		  BOARD_USER_GPIO->DR &= ~(1UL << latch);
+		// All data is in.  Latch current row.
+		BOARD_USER_GPIO->DR |= (1UL << latch);
+		BOARD_USER_GPIO->DR &= ~(1UL << latch);
 
-		  // Move to next row.
-		  currentRow++;
-		  if (currentRow == 16) {
-			currentRow = 0U;
+		// Move to next row.
+		currentRow++;
+		if (currentRow == 16) {
+			currentRow = 0;
 
 			frame++;
 			if (frame > totalFrames) {
-			  frame = 1;
+				frame = 1;
 			}
 
 			framesElapsed++;
-		  }
+		}
 
-		  // Control image change speed.
-		  if (framesElapsed >= changeImageFrames) {
+		// Control image change speed.
+		if (framesElapsed >= changeImageFrames) {
 			framesElapsed = 0;
 
 			imgNum++;
 			if (imgNum == numImages) {
-			  imgNum = 0;
+				imgNum = 0;
 			}
-		  }
-	    }
+		}
+	}
 }
