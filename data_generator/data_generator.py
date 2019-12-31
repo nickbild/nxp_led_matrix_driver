@@ -3,9 +3,14 @@ import sys
 
 
 image_change_speed = 6000  # Higher value = slower animation speed.
-
 totalFrames = 40
-denominator = 256 / totalFrames	 # Scale colors to fit in PWM space.
+
+# Scale colors to fit in PWM space.
+# Adjust for eye's relative sensitivity to each color.
+denominator_r = 256 / totalFrames
+denominator_g = 256 / (totalFrames - 10)
+denominator_b = 256 / (totalFrames + 10)
+
 num_images = 0
 
 red_all = []
@@ -35,9 +40,9 @@ for file in sys.argv[1:]:
             if pixel == "":
                 continue
 
-            b = int(int(pixel[4:6], 16) / denominator)
-            g = int(int(pixel[6:8], 16) / denominator)
-            r = int(int(pixel[8:10], 16) / denominator)
+            b = round(int(pixel[4:6], 16) / denominator_b)
+            g = round(int(pixel[6:8], 16) / denominator_g)
+            r = round(int(pixel[8:10], 16) / denominator_r)
 
             red_row.append(r)
             green_row.append(g)
