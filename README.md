@@ -14,6 +14,10 @@ Top view of the EVK:
 
 ![EVK Top](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mimxrt1010-evk_top_sm.jpg)
 
+EVK connected to LED matrix:
+
+![EVK connected](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mimxrt1010-evk_connected_sm.jpg)
+
 # Software License
 
 Copyright 2019 Nick Bild
