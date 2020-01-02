@@ -57,7 +57,7 @@ Some sample images.  Taking images of an illuminated LED matrix is very difficul
 #define selectD BOARD_USER_10_GPIO_PIN			   // J56, 4
 ```
 
-2. Generate C data structure files containing graphic data.  See details here.
+2. Generate C data structure files containing graphic data.  [See details here](#create).
 
 3. Prepare graphic data:
 
@@ -97,6 +97,8 @@ __RODATA(Flash2) const unsigned short int brightnessB[numImages][32][32] = {{{0,
 5. Transfer the code to the i.MX RT1010 EVK.  NXP has some great documentation if needed:
 
 https://www.nxp.com/document/guide/getting-started-with-i-mx-rt1010-evaluation-kit:GS-MIMXRT1010-EVK
+
+# Create Graphics
 
 # About the Author
 
