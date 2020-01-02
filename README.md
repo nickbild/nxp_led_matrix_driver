@@ -100,6 +100,14 @@ https://www.nxp.com/document/guide/getting-started-with-i-mx-rt1010-evaluation-k
 
 # Create Graphics
 
+The easiest way to create graphics for the matrix is to use [piskelapp.com](https://www.piskelapp.com/):
+
+1. Create a new 32x32 sprite.
+
+2. Use `Export as C File`.  This file can directly be used with the included script, [data_generator/data_generator.py](https://github.com/nickbild/nxp_led_matrix_driver/blob/master/data_generator/data_generator.py).
+
+3. It's not required, but you may also want to `Save as .piskel` so you can edit your graphic later.
+
 # About the Author
 
 [Nick A. Bild, M.S.](https://nickbild79.firebaseapp.com/#!/)
