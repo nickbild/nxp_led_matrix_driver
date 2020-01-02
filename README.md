@@ -1,6 +1,6 @@
-# NXP MIMXRT1010-EVK LED Matrix Driver
+# NXP i.MX RT1010 EVK RGB LED Matrix Driver
 
-Drive a 32x32 LED matrix with the NXP [i.MX RT1010 EVK](http://nxp.com/imxrt1010evk).  Any matrix that is drop-in compatible with the [Adafruit 1484](https://www.adafruit.com/product/1484) will work.
+Drive a 32x32 RGB LED matrix with the NXP [i.MX RT1010 EVK](http://nxp.com/imxrt1010evk).  Any matrix that is drop-in compatible with the [Adafruit 1484](https://www.adafruit.com/product/1484) will work.
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/nickbild/nxp_led_matrix_driver/master/media/matrix.gif">
@@ -21,6 +21,14 @@ EVK connected to LED matrix:
 EVK driving the matrix:
 
 ![EVK driving matrix](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/nxp_matrix_sm.jpg)
+
+Some sample images.  Taking images of a lit LED matrix is very difficult.  It definitely looks better in person.
+
+![Mona Lisa](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mona_lisa_sm.jpg)
+
+![Mario](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mario_sm.jpg)
+
+![Hackster](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/hackster_sm.jpg)
 
 # Software License
 
