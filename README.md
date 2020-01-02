@@ -10,7 +10,7 @@ Drive a 32x32 RGB LED matrix with the NXP [i.MX RT1010 EVK](http://nxp.com/imxrt
 
 High resolution video available on [YouTube](https://www.youtube.com/watch?v=qah41zP-ang).
 
-Top view of the EVK.  The strange looking wires are standard 22AWG copper wires wrapped in aluminum foil.  The i.MX RT1010 EVK GPIOs switch *very* fast, so EMI shielding was a must to prevent spurious signals from producing unwanted visual artifacts on the matrix.
+Top view of the EVK.  The strange looking wires are standard 22AWG copper wires wrapped in aluminum foil.  The i.MX RT1010 EVK GPIOs switch *very* fast, so EMI shielding was a must to prevent spurious signals from producing unwanted visual artifacts on the matrix.  That took more than a little debugging to sort out.  :)
 
 ![EVK Top](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mimxrt1010-evk_top_sm.jpg)
 
@@ -35,6 +35,27 @@ Some sample images.  Taking images of an illuminated LED matrix is very difficul
 <p align="center">
 <img src="https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/hackster_sm.jpg">
 </p>
+
+# Use
+
+Connect the GPIO pins to your LED matrix per the comments in [source/led_matrix_driver.c](https://github.com/nickbild/nxp_led_matrix_driver/blob/master/source/led_matrix_driver.c):
+
+```
+// GPIO pin mappings.							          // Header, Pin Number
+#define pinR1 BOARD_USER_AD1_GPIO_PIN			  // J56, 14
+#define pinG1 BOARD_USER_AD2_GPIO_PIN			  // J56, 16
+#define pinB1 BOARD_USER_AD3_GPIO_PIN			  // J57, 10
+#define pinR2 BOARD_USER_AD4_GPIO_PIN			  // J57, 8
+#define pinG2 BOARD_USER_AD5_GPIO_PIN			  // J57, 6
+#define pinB2 BOARD_USER_AD6_GPIO_PIN			  // J57, 12
+#define pinOE BOARD_USER_AD7_GPIO_PIN			  // J26, 2
+#define latch BOARD_USER_AD9_GPIO_PIN			  // J26, 4
+#define pinClk BOARD_USER_AD10_GPIO_PIN			// J26, 6
+#define selectA BOARD_USER_AD14_GPIO_PIN		// J26, 8
+#define selectB BOARD_USER_2_GPIO_PIN			  // J57, 20
+#define selectC BOARD_USER_9_GPIO_PIN			  // J56, 2
+#define selectD BOARD_USER_10_GPIO_PIN			// J56, 4
+```
 
 # Software License
 
