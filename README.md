@@ -38,7 +38,9 @@ Some sample images.  Taking images of an illuminated LED matrix is very difficul
 
 # Use
 
-1. Connect the GPIO pins to your LED matrix per the comments in [source/led_matrix_driver.c](https://github.com/nickbild/nxp_led_matrix_driver/blob/master/source/led_matrix_driver.c):
+1. Clone this repo (`git clone https://github.com/nickbild/nxp_led_matrix_driver.git`), then import into a project in [MCUXpresso IDE](https://www.nxp.com/design/software/development-software/mcuxpresso-software-and-tools/mcuxpresso-integrated-development-environment-ide:MCUXpresso-IDE).
+
+2. Connect the GPIO pins to your LED matrix per the comments in [source/led_matrix_driver.c](https://github.com/nickbild/nxp_led_matrix_driver/blob/master/source/led_matrix_driver.c):
 
 ```c
 // GPIO pin mappings.							// Header, Pin Number
@@ -57,9 +59,9 @@ Some sample images.  Taking images of an illuminated LED matrix is very difficul
 #define selectD BOARD_USER_10_GPIO_PIN			   // J56, 4
 ```
 
-2. Generate C data structure files containing graphic data.  [See details here](#create-graphics).
+3. Generate C data structure files containing graphic data.  [See details here](#create-graphics).
 
-3. Prepare graphic data:
+4. Prepare graphic data:
 
 ```bash
 python3 data_generator/data_generator.py [data_file_1.c] ... [data_file_N.c]
@@ -80,7 +82,7 @@ __RODATA(Flash2) const unsigned short int brightnessG[numImages][32][32] = {{{0,
 __RODATA(Flash2) const unsigned short int brightnessB[numImages][32][32] = {{{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 5, 5, 32, 0, 0, 0, 0, 0, 32, 4, 4, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0}, {1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 5, 5, 32, 0, 0, 0, 0, 0, 32, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0}, {1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 5, 5, 32, 32, 0, 0, 0, 32, 32, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0}, {1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 5, 5, 32, 32, 32, 0, 32, 32, 32, 4, 4, 3, 0, 0, 0, 0, 0, 3, 3, 3, 3}, {1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 1, 5, 5, 5, 32, 32, 32, 32, 32, 4, 4, 4, 3, 0, 0, 0, 0, 0, 3, 3, 3, 3}, {1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 5, 5, 32, 32, 32, 4, 4, 3, 3, 3, 0, 0, 0, 0, 0, 3, 3, 3, 3}, {1, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 32, 32, 32, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0}, {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 5, 5, 32, 32, 32, 32, 32, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0}, {1, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 5, 5, 5, 32, 32, 0, 32, 32, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0}, {1, 1, 1, 0, 0, 0, 0, 0, 1, 1, 1, 5, 5, 32, 32, 0, 0, 0, 32, 32, 4, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 5, 5, 32, 0, 0, 0, 0, 0, 32, 4, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 5, 5, 32, 0, 0, 0, 0, 0, 32, 4, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 0, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 0, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 50, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}}};
 ```
 
-4. Copy the above output into [source/led_matrix_driver.c](https://github.com/nickbild/nxp_led_matrix_driver/blob/master/source/led_matrix_driver.c), between the comments:
+5. Copy the above output into [source/led_matrix_driver.c](https://github.com/nickbild/nxp_led_matrix_driver/blob/master/source/led_matrix_driver.c), between the comments:
 
 ```c
 /*******************************************************************************
@@ -94,7 +96,7 @@ __RODATA(Flash2) const unsigned short int brightnessB[numImages][32][32] = {{{0,
  ******************************************************************************/
 ```
 
-5. Transfer the code to the i.MX RT1010 EVK.  NXP has some great documentation if needed:
+6. Transfer the code to the i.MX RT1010 EVK.  NXP has some great documentation if needed:
 
 https://www.nxp.com/document/guide/getting-started-with-i-mx-rt1010-evaluation-kit:GS-MIMXRT1010-EVK
 
