@@ -6,6 +6,14 @@ Drive a 32x32 LED matrix with the NXP [i.MX RT1010 EVK](http://nxp.com/imxrt1010
 <img src="https://raw.githubusercontent.com/nickbild/nxp_led_matrix_driver/master/media/matrix.gif">
 </p>
 
+# Media
+
+High resolution video available on [YouTube](https://www.youtube.com/watch?v=qah41zP-ang).
+
+Top view of the EVK:
+
+![EVK Top](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mimxrt1010-evk_top_sm.jpg)
+
 # Software License
 
 Copyright 2019 Nick Bild
