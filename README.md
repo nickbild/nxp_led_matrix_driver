@@ -22,7 +22,7 @@ EVK driving the matrix:
 
 ![EVK driving matrix](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/nxp_matrix_sm.jpg)
 
-Some sample images.  Taking images of a lit LED matrix is very difficult.  It definitely looks better in person.
+Some sample images.  Taking images of an illuminated LED matrix is very difficult.  It definitely looks better in person.
 
 <p align="center">
 <img src="https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mona_lisa_sm.jpg">
