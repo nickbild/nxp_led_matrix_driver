@@ -57,7 +57,7 @@ Some sample images.  Taking images of an illuminated LED matrix is very difficul
 #define selectD BOARD_USER_10_GPIO_PIN			   // J56, 4
 ```
 
-2. Generate C data structure files containing graphic data.  [See details here](#create).
+2. Generate C data structure files containing graphic data.  [See details here](#create-graphics).
 
 3. Prepare graphic data:
 
