@@ -57,6 +57,10 @@ Connect the GPIO pins to your LED matrix per the comments in [source/led_matrix_
 #define selectD BOARD_USER_10_GPIO_PIN			   // J56, 4
 ```
 
+# About the Author
+
+[Nick A. Bild, M.S.](https://nickbild79.firebaseapp.com/#!/)
+
 # Software License
 
 Copyright 2019 Nick Bild
