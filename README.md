@@ -94,6 +94,10 @@ __RODATA(Flash2) const unsigned short int brightnessB[numImages][32][32] = {{{0,
  ******************************************************************************/
 ```
 
+5. Transfer the code to the i.MX RT1010 EVK.  NXP has some great documentation if needed:
+
+https://www.nxp.com/document/guide/getting-started-with-i-mx-rt1010-evaluation-kit:GS-MIMXRT1010-EVK
+
 # About the Author
 
 [Nick A. Bild, M.S.](https://nickbild79.firebaseapp.com/#!/)
