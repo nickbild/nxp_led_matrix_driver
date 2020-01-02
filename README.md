@@ -24,11 +24,17 @@ EVK driving the matrix:
 
 Some sample images.  Taking images of a lit LED matrix is very difficult.  It definitely looks better in person.
 
-![Mona Lisa](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mona_lisa_sm.jpg)
+<p align="center">
+<img src="https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mona_lisa_sm.jpg">
+</p>
 
-![Mario](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mario_sm.jpg)
+<p align="center">
+<img src="https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mario_sm.jpg">
+</p>
 
-![Hackster](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/hackster_sm.jpg)
+<p align="center">
+<img src="https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/hackster_sm.jpg">
+</p>
 
 # Software License
 
