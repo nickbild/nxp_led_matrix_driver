@@ -10,7 +10,7 @@ Drive a 32x32 RGB LED matrix with the NXP [i.MX RT1010 EVK](http://nxp.com/imxrt
 
 High resolution video available on [YouTube](https://www.youtube.com/watch?v=qah41zP-ang).
 
-Top view of the EVK:
+Top view of the EVK.  The strange looking wires are standard 22AWG copper wires wrapped in aluminum foil.  The i.MX RT1010 EVK GPIOs switch *very* fast, so EMI shielding was a must to prevent spurious signals from producing unwanted visual artifacts on the matrix.
 
 ![EVK Top](https://github.com/nickbild/nxp_led_matrix_driver/raw/master/media/mimxrt1010-evk_top_sm.jpg)
 
