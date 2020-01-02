@@ -41,7 +41,7 @@ Some sample images.  Taking images of an illuminated LED matrix is very difficul
 Connect the GPIO pins to your LED matrix per the comments in [source/led_matrix_driver.c](https://github.com/nickbild/nxp_led_matrix_driver/blob/master/source/led_matrix_driver.c):
 
 ```
-// GPIO pin mappings.							  // Header, Pin Number
+// GPIO pin mappings.							// Header, Pin Number
 #define pinR1 BOARD_USER_AD1_GPIO_PIN			  // J56, 14
 #define pinG1 BOARD_USER_AD2_GPIO_PIN			  // J56, 16
 #define pinB1 BOARD_USER_AD3_GPIO_PIN			  // J57, 10
@@ -54,7 +54,7 @@ Connect the GPIO pins to your LED matrix per the comments in [source/led_matrix_
 #define selectA BOARD_USER_AD14_GPIO_PIN		  // J26, 8
 #define selectB BOARD_USER_2_GPIO_PIN			  // J57, 20
 #define selectC BOARD_USER_9_GPIO_PIN			  // J56, 2
-#define selectD BOARD_USER_10_GPIO_PIN			 // J56, 4
+#define selectD BOARD_USER_10_GPIO_PIN			   // J56, 4
 ```
 
 # Software License
